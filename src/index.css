@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+.active > span {
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+}
+
+form > div {
+  @apply flex items-center justify-between;
+}
+
+input {
+  @apply block w-full rounded border-2 border-Lightgray py-2 px-3 outline-transparent  hover:border-Purplishblue focus:border-Purplishblue;
+}
+
+input.error {
+  @apply border-Strawberryred;
+}
+
+label {
+  @apply mt-3 mb-1 block text-sm font-medium text-Marineblue;
+}
+
+div span.error {
+  @apply hidden text-Strawberryred;
+}
